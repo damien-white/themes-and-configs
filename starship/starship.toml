@@ -1,0 +1,169 @@
+### Custom Starship shell prompt config ###
+### NOTE: This config file has only been tested with the `fish` shell. You will
+### most likely need to make modifications to get it working on other shells.
+
+# Disable extra line after the output for vertically condensed style
+add_newline = false
+
+## Modify config keys to wrap entries with a whitespace and parentheses
+
+[aws]
+format = '\([ $symbol($profile)(\($region\))(\[$duration\])]($style) \)'
+
+[character]
+success_symbol = '[——❯](bold green)'
+error_symbol = '[❮——](bold red)'
+
+[cmake]
+format = '\([ $symbol($version)]($style) \)'
+
+[cmd_duration]
+format = ' [$duration](bold fg:bright-yellow)'
+min_time = 500
+
+[conda]
+format = '\([ $symbol$environment]($style) \)'
+
+[crystal]
+format = '\([ $symbol($version)]($style) \)'
+
+[dart]
+format = '\([ $symbol($version)]($style) \)'
+
+[deno]
+format = '\([ $symbol($version)]($style) \)'
+
+[directory]
+read_only = ' '
+format = '\([ $path]($style)[$read_only]($read_only_style) \)'
+truncation_symbol = '…/'
+
+[docker_context]
+format = '\([ $symbol$context]($style) \)'
+
+[dotnet]
+format = '\([ $symbol($version)(🎯 $tfm)]($style) \)'
+
+[elixir]
+format = '\([ $symbol($version \(OTP $otp_version\))]($style) \)'
+
+[elm]
+format = '\([ $symbol($version)]($style) \)'
+
+[erlang]
+format = '\([ $symbol($version)]($style) \)'
+
+[gcloud]
+format = '\([ $symbol$account(@$domain)(\($region\))]($style) \)'
+
+[git_branch]
+format = '\([ $symbol$branch]($style) \)'
+
+[git_status]
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
+staged = '[++\($count\)](green)'
+format = '([\[ $all_status$ahead_behind \]](fg:white))'
+
+[golang]
+format = '\([ $symbol($version)]($style) \)'
+
+[helm]
+format = '\([ $symbol($version)]($style) \)'
+
+[hg_branch]
+format = '\([ $symbol$branch]($style) \)'
+
+[hostname]
+ssh_only = false
+format =  '\([ $hostname](bold fg:bright-yellow) \)'
+trim_at = '.'
+disabled = false
+
+[java]
+format = '\([ $symbol($version)]($style) \)'
+
+[julia]
+format = '\([ $symbol($version)]($style) \)'
+
+[kotlin]
+format = '\([ $symbol($version)]($style) \)'
+
+[kubernetes]
+format = '\([ $symbol$context( \($namespace\))]($style) \)'
+
+[lua]
+format = '\([ $symbol($version)]($style) \)'
+
+[memory_usage]
+disabled = false
+format = '—\[RAM: [$ram_pct]($style) \)'
+style = "fg:bright-green"
+threshold = 60
+
+[nim]
+format = '\([ $symbol($version)]($style) \)'
+
+[nix_shell]
+format = '\([ $symbol$state( \($name\))]($style) \)'
+
+[nodejs]
+format = '\([ $symbol($version)]($style) \)'
+
+[ocaml]
+format = '\([ $symbol($version)(\($switch_indicator$switch_name\))]($style) \)'
+
+[openstack]
+format = '\([ $symbol$cloud(\($project\))]($style) \)'
+
+[package]
+format = '\([ $symbol$version]($style) \)'
+
+[perl]
+format = '\([ $symbol($version)]($style) \)'
+
+[php]
+format = '\([ $symbol($version)]($style) \)'
+
+[purescript]
+format = '\([ $symbol($version)]($style) \)'
+
+[python]
+format = '\([ ${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style) \)'
+
+[red]
+format = '\([ $symbol($version)]($style) \)'
+
+[ruby]
+format = '\([ $symbol($version)]($style) \)'
+
+[rust]
+format = '\([ $symbol($version)]($style) \)'
+
+[scala]
+format = '\([ $symbol($version)]($style) \)'
+
+[swift]
+format = '\([ $symbol($version)]($style) \)'
+
+[terraform]
+format = '\([ $symbol$workspace]($style) \)'
+
+#[time]
+#format = '\([ $time]($style) \)'
+
+[username]
+format = '\([ $user]($style) \)'
+show_always = true
+style_root = 'bold fg:bright-red'
+style_user = 'bold fg:bright-green'
+
+[vagrant]
+format = '\([ $symbol($version)]($style) \)'
+
+[vlang]
+format = '\([ $symbol($version)]($style) \)'
+
+[zig]
+format = '\([ $symbol($version)]($style)\)'
